@@ -22,6 +22,29 @@ function generatePassword () {
   var lowers = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   var uppers = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
+  var generatedOptions = []
+
+  if (passLower) {
+    generatedOptions.push(lowers);
+  }
+
+  if (passUpper)  {
+    generatedOptions.push(uppers);
+  }
+
+  if (passNumber) {
+    generatedOptions.push(numbers);
+  }
+
+  if (passSpecial)  {
+    generatedOptions.push(symbols);
+  }
+
+  console.log(generatedOptions);
+
+  var randoList = generatedOptions[Math.floor(Math.random() * generatedOptions.length)];
+
+  console.log(randoList);
 }
 
 // Write password to the #password input
