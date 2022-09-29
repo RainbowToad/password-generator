@@ -40,6 +40,11 @@ function generatePassword () {
     generatedOptions.push(symbols);
   }
 
+  if (generatedOptions.length === 0) {
+    window.alert("You must select at least one option");
+    return;
+  }
+
   console.log(generatedOptions);
 
   var randoList = generatedOptions[Math.floor(Math.random() * generatedOptions.length)];
