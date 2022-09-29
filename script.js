@@ -71,12 +71,15 @@ function generatePassword () {
     finalForm[Math.floor(Math.random() * finalForm.length)];
   }
 
+  var hugeMittens = "";
+
   for (var i = 0; i<passLength; i++) {
-    console.log(charlie(i))
+    var tinyMittens = Math.floor(Math.random() * finalForm.length);
+    hugeMittens += finalForm[tinyMittens];
 
   }
-
-  charlie();
+  
+  return hugeMittens
   
 
 }
