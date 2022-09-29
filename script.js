@@ -57,15 +57,27 @@ function generatePassword () {
 
   console.log(finalForm);
 
-  var randoList = finalForm[Math.floor(Math.random() * finalForm.length)];
+  var rando = finalForm[Math.floor(Math.random() * finalForm.length)];
+  var rando1 = finalForm[Math.floor(Math.random() * finalForm.length)];
+  var rando2 = finalForm[Math.floor(Math.random() * finalForm.length)];
+  var rando3 = finalForm[Math.floor(Math.random() * finalForm.length)];
 
-  console.log(randoList);
+  console.log(rando);
+  console.log(rando1);
+  console.log(rando2);
+  console.log(rando3);
 
-  for (var i = 0; i<passLength; i++) {
-    var tinyMitten = finalForm[Math.floor(Math.random() * finalForm.length)]
+  function charlie() {
+    finalForm[Math.floor(Math.random() * finalForm.length)];
   }
 
-  console.log(tinyMitten);
+  for (var i = 0; i<passLength; i++) {
+    console.log(charlie(i))
+
+  }
+
+  charlie();
+  
 
 }
 
