@@ -1,4 +1,4 @@
-# <Password Generator>
+# Password Generator
 
 ## Description
 
@@ -7,7 +7,7 @@ This project was done to explore my growing knowledge of Javascript by making a 
 
 ## Usage
 
-URL available at :
+URL available at : https://rainbowtoad.github.io/password-generator/
 Screenshot : ![127 0 0 1_5500_index html](https://user-images.githubusercontent.com/111533301/193327294-a04389e4-541e-4be3-859a-4ce6bbd47eef.png)
 
 
