@@ -59,10 +59,32 @@ function generatePassword () {
 // Create password array of random items from options array
   var hugeMittens = "";
 
+// Guarantee selection of at least one of each entity in password
+  if (passLower) {
+    var lowerRando = Math.floor(Math.random() * lowers.length);
+    hugeMittens += lowers[lowerRando];
+  }
+  
+  if (passUpper) {
+    var upperRando = Math.floor(Math.random() * uppers.length);
+    hugeMittens += uppers[upperRando];
+  }
+  
+  if (passNumber) {
+    var numRando = Math.floor(Math.random() * numbers.length);
+    hugeMittens += numbers[numRando];
+  }
+  
+  if (passSpecial) {
+    var specialRando = Math.floor(Math.random() * symbols.length);
+    hugeMittens += symbols[specialRando];
+  }
+
+ // Fill the rest of the password with random to password length
+
   for (var i = 0; i<passLength; i++) {
     var tinyMittens = Math.floor(Math.random() * finalForm.length);
     hugeMittens += finalForm[tinyMittens];
-
   }
   
   return hugeMittens
