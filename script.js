@@ -2,9 +2,8 @@
 var generateBtn = document.querySelector("#generate");
 
 
-
 function generatePassword () {
-  
+  // Prompt user for parameters
   var passLength = window.prompt("Character Length?")
   
   if (passLength<8 || passLength>128) {
@@ -17,11 +16,15 @@ function generatePassword () {
   var passNumber = window.confirm("Would you like to include numbers?");
   var passSpecial = window.confirm("Would you like to include special characters?");
 
+
+  // Arrays of various parameters
   var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var symbols = ["@", "*", "#", "!", "&", "%", "$"];
   var lowers = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var uppers = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
+
+  //Create master array with all options selected
   var generatedOptions = [];
 
   if (passLower) {
@@ -45,32 +48,15 @@ function generatePassword () {
     return;
   }
 
+  // Join and manipulate final array so that it may be assessed. 
   var finalOptions = generatedOptions.join('');
-
-  console.log(finalOptions);
 
   var middleForm = finalOptions.replace(/,/g, "");
 
-  console.log(middleForm);
-
   var finalForm = Array.from(middleForm);
 
-  console.log(finalForm);
-
-  var rando = finalForm[Math.floor(Math.random() * finalForm.length)];
-  var rando1 = finalForm[Math.floor(Math.random() * finalForm.length)];
-  var rando2 = finalForm[Math.floor(Math.random() * finalForm.length)];
-  var rando3 = finalForm[Math.floor(Math.random() * finalForm.length)];
-
-  console.log(rando);
-  console.log(rando1);
-  console.log(rando2);
-  console.log(rando3);
-
-  function charlie() {
-    finalForm[Math.floor(Math.random() * finalForm.length)];
-  }
-
+  
+// Create password array of random items from options array
   var hugeMittens = "";
 
   for (var i = 0; i<passLength; i++) {
@@ -89,7 +75,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;cd
+  passwordText.value = password;
 
 }
 
